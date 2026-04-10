@@ -33,7 +33,7 @@ public class SmartAttendanceSystem {
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input! Enter number.");
-                sc.nextLine(); // clear buffer
+                sc.nextLine();
                 continue;
             }
 
@@ -60,9 +60,8 @@ public class SmartAttendanceSystem {
     static void addStudent() {
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
-        sc.nextLine(); // FIXED buffer issue
+        sc.nextLine();
 
-        // Check duplicate ID
         for (Student s : students) {
             if (s.id == id) {
                 System.out.println("Student with this ID already exists!");
